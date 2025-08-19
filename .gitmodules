@@ -1,0 +1,6 @@
+[submodule "modules/CTNH-Bio"]
+	path = modules/CTNH-Bio
+	url = https://github.com/CPearl0/CTNH-Core.git
+[submodule "modules/CTNH-Core"]
+	path = modules/CTNH-Core
+	url = https://github.com/moguang2004/CTNH-Bio.git
