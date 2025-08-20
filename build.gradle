@@ -116,3 +116,11 @@ task runCore(type: GradleBuild) {
 task runDataCore(type: GradleBuild) {
     tasks = [':modules:CTNH-Core:runData']
 }
+
+task runCTPP(type: GradleBuild) {
+    tasks = [':modules:CTPP:runClient']
+}
+
+task runDataCTPP(type: GradleBuild) {
+    tasks = [':modules:CTPP:runData']
+}
