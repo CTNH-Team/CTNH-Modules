@@ -29,6 +29,7 @@ rootProject.name = 'CTNH-Multi'
 // ----------
 include "modules:CTNH-Bio"
 include "modules:CTNH-Core"
+include "modules:CTPP"
 //include "modules:1.14.4"
 //include "modules:1.15.2"
 //include "modules:1.16.5"

@@ -105,6 +105,10 @@ task runBio(type: GradleBuild) {
     tasks = [':modules:CTNH-Bio:runClient']
 }
 
+task runDataBio(type: GradleBuild) {
+    tasks = [':modules:CTNH-Bio:runData']
+}
+
 task runCore(type: GradleBuild) {
     tasks = [':modules:CTNH-Core:runClient']
 }
