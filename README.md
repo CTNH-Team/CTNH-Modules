@@ -1,7 +1,9 @@
 # Create: New Horizon
 ## Submodules
-CTNH-Core:  
-CTNH-Bio:
+CTNH-Core\
+CTNH-Bio\
+CTPP\
+CTNH-Lib
 
 ## Getting Started
 

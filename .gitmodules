@@ -7,3 +7,6 @@
 [submodule "modules/CTPP"]
 	path = modules/CTPP
 	url = https://github.com/moguang2004/CTPP.git
+[submodule "modules/CTNH-Lib"]
+	path = modules/CTNH-Lib
+	url = https://github.com/CTNH-Team/CTNH-Lib.git
