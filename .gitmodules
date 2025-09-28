@@ -10,3 +10,6 @@
 [submodule "modules/CTNH-Lib"]
 	path = modules/CTNH-Lib
 	url = https://github.com/CTNH-Team/CTNH-Lib.git
+[submodule "modules/CTNH-Mana"]
+	path = modules/CTNH-Mana
+	url = https://github.com/CTNH-Team/CTNH-Mana.git

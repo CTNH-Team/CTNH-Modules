@@ -136,3 +136,14 @@ task runDataCTPP(type: GradleBuild) {
 task buildCTPP(type: GradleBuild) {
     tasks = [':modules:CTPP:build']
 }
+task runMana(type: GradleBuild) {
+    tasks = [':modules:CTNH-Mana:runClient']
+}
+
+task runDataMana(type: GradleBuild) {
+    tasks = [':modules:CTNH-Mana:runData']
+}
+
+task buildMana(type: GradleBuild) {
+    tasks = [':modules:CTNH-Mana:build']
+}
