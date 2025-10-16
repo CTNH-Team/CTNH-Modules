@@ -1,8 +1,8 @@
 plugins {
     //id 'fabric-loom' version '1.3-SNAPSHOT' apply(false)
-    id 'net.minecraftforge.gradle' version '[6.0,6.2)' apply(false)
+    id 'net.neoforged.moddev.legacyforge' version '2.0.91' apply(false)
     //id("org.spongepowered.mixin") version "0.7-SNAPSHOT" apply(false)
-    id 'org.parchmentmc.librarian.forgegradle' version '1.+' apply(false)
+
 }
 allprojects {
     tasks.withType(JavaCompile).configureEach {
@@ -12,13 +12,19 @@ allprojects {
 }
 subprojects {
     apply plugin: 'java'
-    apply plugin: 'net.minecraftforge.gradle'
     //apply plugin: 'net.minecraftforge.gradle'
-    apply plugin: 'org.parchmentmc.librarian.forgegradle'
+    apply plugin: 'net.neoforged.moddev.legacyforge'
+
+    //apply plugin: 'org.parchmentmc.librarian.forgegradle'
     //java.withSourcesJar()
     //java.withJavadocJar()
-    minecraft {
-        mappings channel: 'parchment', version: '2023.09.03-1.20.1'
+    legacyForge {
+//        version = project.minecraft_version + '-' + project.forge_version
+//
+//        parchment {
+//            mappingsVersion = project.mapping_version
+//            minecraftVersion = project.minecraft_version
+//        }
     }
 
     repositories {
@@ -96,9 +102,9 @@ subprojects {
         }
         maven { url = "https://maven.createmod.net" }
     }
-    dependencies {
-        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    }
+//    dependencies {
+//        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+//    }
 }
 
 task runBio(type: GradleBuild) {
