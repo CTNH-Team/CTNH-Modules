@@ -101,6 +101,9 @@ subprojects {
             }
         }
         maven { url = "https://maven.createmod.net" }
+        maven {
+            url "https://maven.nova-committee.cn/s3"
+        }
     }
 //    dependencies {
 //        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
