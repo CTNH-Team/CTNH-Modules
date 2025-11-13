@@ -13,3 +13,6 @@
 [submodule "modules/CTNH-Mana"]
 	path = modules/CTNH-Mana
 	url = https://github.com/CTNH-Team/CTNH-Mana
+[submodule "modules/CTNH-Energy"]
+	path = modules/CTNH-Energy
+	url = https://github.com/CTNH-Team/CTNH-Energy.git

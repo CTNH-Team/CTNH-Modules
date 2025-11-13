@@ -102,6 +102,10 @@ subprojects {
         }
         maven { url = "https://maven.createmod.net" }
         maven {
+            name = "TerraformersMC"
+            url = "https://maven.terraformersmc.com/"
+        }
+        maven {
             url "https://maven.nova-committee.cn/s3"
         }
     }
