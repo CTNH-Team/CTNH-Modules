@@ -1,18 +1,24 @@
 [submodule "modules/CTNH-Bio"]
 	path = modules/CTNH-Bio
 	url = https://github.com/CTNH-Team/CTNH-Bio.git
+	branch = dev
 [submodule "modules/CTNH-Core"]
 	path = modules/CTNH-Core
 	url = https://github.com/CTNH-Team/CTNH-Core.git
+	branch = dev
 [submodule "modules/CTPP"]
 	path = modules/CTPP
 	url = https://github.com/moguang2004/CTPP.git
+	branch = dev
 [submodule "modules/CTNH-Lib"]
 	path = modules/CTNH-Lib
 	url = https://github.com/CTNH-Team/CTNH-Lib.git
+	branch = dev
 [submodule "modules/CTNH-Mana"]
 	path = modules/CTNH-Mana
-	url = https://github.com/CTNH-Team/CTNH-Mana
+	url = https://github.com/CTNH-Team/CTNH-Mana.git
+	branch = newstart
 [submodule "modules/CTNH-Energy"]
 	path = modules/CTNH-Energy
 	url = https://github.com/CTNH-Team/CTNH-Energy.git
+	branch = master
