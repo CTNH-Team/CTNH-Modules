@@ -109,9 +109,12 @@ subprojects {
             url "https://maven.nova-committee.cn/s3"
         }
     }
-//    dependencies {
-//        minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-//    }
+    dependencies {
+        modCompileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+        modCompileOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
+        modRuntimeOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
+        modImplementation("curse.maven:tmrv-1194921:7259315")
+    }
 }
 
 task runBio(type: GradleBuild) {
