@@ -8,7 +8,12 @@ allprojects {
     tasks.withType(JavaCompile).configureEach {
         options.encoding = 'UTF-8'
     }
-
+    configurations.all {
+        resolutionStrategy {
+            cacheChangingModulesFor 365, 'days'
+            cacheDynamicVersionsFor 365, 'days'
+        }
+    }
 }
 subprojects {
     apply plugin: 'java'
@@ -28,6 +33,10 @@ subprojects {
     }
 
     repositories {
+        flatDir {
+            name "extra-mods"
+            dir file("libs")
+        }
         mavenCentral()
         maven {
             url = "https://maven.minecraftforge.net/"
@@ -59,9 +68,9 @@ subprojects {
         maven {
             url = "https://maven.teamresourceful.com/repository/maven-public/"
         }
-        maven {
-            url = "https://maven.firstdarkdev.xyz/snapshots"
-        }
+//        maven {
+//            url = "https://maven.firstdarkdev.xyz/snapshots"
+//        }
         maven {
             url = "https://maven.gtceu.com"
         }
@@ -108,58 +117,18 @@ subprojects {
         maven {
             url "https://maven.nova-committee.cn/s3"
         }
+//        maven {
+//            url "http://tehnut.info/maven/"
+//            allowInsecureProtocol = true
+//            content {
+//                includeGroup "com.wayoftime.bloodmagic"
+//            }
+//        }
     }
     dependencies {
         modCompileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-        modCompileOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
-        modRuntimeOnly("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
+        //modImplementation("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
+        modImplementation("curse.maven:emi-580555:6420945")
         modImplementation("curse.maven:tmrv-1194921:7259315")
     }
-}
-
-task runBio(type: GradleBuild) {
-    tasks = [':modules:CTNH-Bio:runClient']
-}
-
-task runDataBio(type: GradleBuild) {
-    tasks = [':modules:CTNH-Bio:runData']
-}
-
-task buildBio(type: GradleBuild) {
-    tasks = [':modules:CTNH-Bio:build']
-}
-
-task runCore(type: GradleBuild) {
-    tasks = [':modules:CTNH-Core:runClient']
-}
-
-task runDataCore(type: GradleBuild) {
-    tasks = [':modules:CTNH-Core:runData']
-}
-
-task buildCore(type: GradleBuild) {
-    tasks = [':modules:CTNH-Core:build']
-}
-
-task runCTPP(type: GradleBuild) {
-    tasks = [':modules:CTPP:runClient']
-}
-
-task runDataCTPP(type: GradleBuild) {
-    tasks = [':modules:CTPP:runData']
-}
-
-task buildCTPP(type: GradleBuild) {
-    tasks = [':modules:CTPP:build']
-}
-task runMana(type: GradleBuild) {
-    tasks = [':modules:CTNH-Mana:runClient']
-}
-
-task runDataMana(type: GradleBuild) {
-    tasks = [':modules:CTNH-Mana:runData']
-}
-
-task buildMana(type: GradleBuild) {
-    tasks = [':modules:CTNH-Mana:build']
 }
