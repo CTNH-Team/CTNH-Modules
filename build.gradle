@@ -35,7 +35,7 @@ subprojects {
     repositories {
         flatDir {
             name "extra-mods"
-            dir file("libs")
+            dir file("../libs")
         }
         mavenCentral()
         maven {
@@ -130,5 +130,6 @@ subprojects {
         //modImplementation("dev.emi:emi-forge:${emi_version}+${minecraft_version}")
         modImplementation("curse.maven:emi-580555:6420945")
         modImplementation("curse.maven:tmrv-1194921:7259315")
+        modImplementation("extra-mods:gtceu-1.20.1-7.4.1-ctnh-slim") { transitive = false }
     }
 }
