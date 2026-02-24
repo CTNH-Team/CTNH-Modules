@@ -16,11 +16,16 @@ out
 # gradle
 build
 .gradle
+
 # other
 eclipse
 run
 run-data
 src/generated/
 src/test/
+
 # Files from Forge MDK
 forge*changelog.txt
+
+# macOS
+.DS_Store
