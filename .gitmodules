@@ -8,7 +8,7 @@
 	branch = dev
 [submodule "modules/CTPP"]
 	path = modules/CTPP
-	url = https://github.com/moguang2004/CTPP.git
+	url = https://github.com/CTNH-Team/CTPP.git
 	branch = dev
 [submodule "modules/CTNH-Lib"]
 	path = modules/CTNH-Lib
@@ -17,8 +17,8 @@
 [submodule "modules/CTNH-Mana"]
 	path = modules/CTNH-Mana
 	url = https://github.com/CTNH-Team/CTNH-Mana.git
-	branch = newstart
+	branch = dev
 [submodule "modules/CTNH-Energy"]
 	path = modules/CTNH-Energy
 	url = https://github.com/CTNH-Team/CTNH-Energy.git
-	branch = master
+	branch = dev
