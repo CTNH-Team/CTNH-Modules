@@ -53,7 +53,11 @@ This multi-module workspace is setup based on [sa-shiro/Minecraft-MultiProject-T
 
 ## License
 
-Unless otherwise stated, this repository is licensed under the [GNU LGPL v2.1 License](https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html).
+Unless otherwise stated, this repository is licensed under the [GNU LGPL v3.0 License](https://www.gnu.org/licenses/lgpl-3.0.html).
+
+### Third-party notice
+
+This repository is based on [sa-shiro/Minecraft-MultiProject-Template](https://github.com/sa-shiro/Minecraft-MultiProject-Template/tree/main/modules), licensed under MIT. The MIT notice for reused template portions is distributed in the `THIRD_PARTY_NOTICES` file.
 
 ### Submodule licenses
 
