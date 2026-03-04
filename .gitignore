@@ -29,3 +29,6 @@ forge*changelog.txt
 
 # macOS
 .DS_Store
+
+# vscode
+.vscode
