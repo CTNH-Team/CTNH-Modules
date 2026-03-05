@@ -1,7 +1,7 @@
 plugins {
-    // id 'fabric-loom' version '1.3-SNAPSHOT' apply(false)
     id 'net.neoforged.moddev.legacyforge' version '2.0.91' apply(false)
-    // id("org.spongepowered.mixin") version "0.7-SNAPSHOT" apply(false)
+    id 'com.diffplug.spotless' version '8.1.0' apply(false)
+    id 'io.freefair.lombok' version '8.14' apply(false)
 }
 
 allprojects {
@@ -13,127 +13,5 @@ allprojects {
             cacheChangingModulesFor 365, 'days'
             cacheDynamicVersionsFor 365, 'days'
         }
-    }
-}
-
-subprojects {
-    apply plugin: 'java'
-    // apply plugin: 'net.minecraftforge.gradle'
-    apply plugin: 'net.neoforged.moddev.legacyforge'
-
-    // apply plugin: 'org.parchmentmc.librarian.forgegradle'
-    // java.withSourcesJar()
-    // java.withJavadocJar()
-    legacyForge {
-        // version = project.minecraft_version + '-' + project.forge_version
-        //
-        // parchment {
-        //     mappingsVersion = project.mapping_version
-        //     minecraftVersion = project.minecraft_version
-        // }
-    }
-
-    repositories {
-        flatDir {
-            name "extra-mods"
-            dir file("../libs")
-        }
-        mavenCentral()
-        maven {
-            url = "https://maven.minecraftforge.net/"
-        }
-        maven {
-            url = "https://maven.architectury.dev"
-        }
-        maven {
-            url = "https://maven.saps.dev/minecraft"
-        }
-        maven {
-            url = "https://dvs1.progwml6.com/files/maven/"
-        }
-        maven {
-            url = "https://maven.blamejared.com/"
-        }
-        maven {
-            url = "https://modmaven.dev"
-        }
-        maven {
-            url = "https://cursemaven.com"
-        }
-        maven {
-            url = "https://maven.tterrag.com/"
-        }
-        maven {
-            url = "https://maven.resourcefulbees.com/repository/maven-public/"
-        }
-        maven {
-            url = "https://maven.teamresourceful.com/repository/maven-public/"
-        }
-        // maven {
-        //     url = "https://maven.firstdarkdev.xyz/snapshots"
-        // }
-        maven {
-            url = "https://maven.gtceu.com"
-        }
-        maven {
-            url = "https://maven.rover656.dev/releases"
-        }
-        maven {
-            url = "https://maven.theillusivec4.top/"
-        }
-        maven {
-            maven {
-                name = 'ModdingX Maven'
-                url = 'https://maven.moddingx.org/'
-            }
-            name = "Modrinth"
-            url = "https://api.modrinth.com/maven"
-        }
-        maven {
-            url "https://maven.latvian.dev/releases"
-            content {
-                includeGroup "dev.latvian.mods"
-                includeGroup "dev.latvian.apps"
-            }
-        }
-        maven {
-            url 'https://jitpack.io'
-            content {
-                includeGroup "com.github.rtyley"
-            }
-        }
-        maven {
-            name = 'GuideME Snapshots'
-            url = 'https://central.sonatype.com/repository/maven-snapshots/'
-            content {
-                includeModule('org.appliedenergistics', 'guideme')
-            }
-        }
-        maven { url = "https://maven.createmod.net" }
-        maven {
-            name = "TerraformersMC"
-            url = "https://maven.terraformersmc.com/"
-        }
-        // maven {
-        //     url "https://maven.nova-committee.cn/s3"
-        // }
-        // maven {
-        //     url "http://tehnut.info/maven/"
-        //     allowInsecureProtocol = true
-        //     content {
-        //         includeGroup "com.wayoftime.bloodmagic"
-        //     }
-        // }
-    }
-
-    dependencies {
-        if (project.path != ":modules:GregTech-Modern") {
-            modCompileOnly(project(path: ":modules:GregTech-Modern", configuration: "apiElements")) { transitive = false }
-            modRuntimeOnly(project(path: ":modules:GregTech-Modern", configuration: "runtimeElements")) { transitive = false }
-        }
-        modCompileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
-        modImplementation("curse.maven:emi-580555:6420945")
-        modImplementation("curse.maven:tmrv-1194921:7259315")
-        // modRuntimeOnly("curse.maven:smsn-1129397:7399448")
     }
 }

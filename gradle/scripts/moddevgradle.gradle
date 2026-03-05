@@ -1,0 +1,70 @@
+mixin {
+    add sourceSets.main, "mixins.${mod_id}.refmap.json"
+    config "${mod_id}.mixins.json"
+}
+
+legacyForge {
+    version = project.minecraft_version + '-' + project.forge_version
+
+    parchment {
+        mappingsVersion = project.mapping_version
+        minecraftVersion = project.minecraft_version
+    }
+
+    if (project.file('src/main/resources/META-INF/accesstransformer.cfg').exists()) {
+        accessTransformers = project.files('src/main/resources/META-INF/accesstransformer.cfg')
+    }
+
+    runs {
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+
+            jvmArgument('-XX:+AllowEnhancedClassRedefinition')
+            jvmArgument('-XX:+IgnoreUnrecognizedVMOptions')
+            jvmArgument('-DnetworkTimeout=6000000')
+
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+
+        client {
+            client()
+            sourceSet = sourceSets.client
+            programArguments.addAll('--refresh-dependencies')
+            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+        }
+
+        server {
+            server()
+            sourceSet = sourceSets.main
+            systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
+            programArguments.addAll('--nogui', '--world', 'world-extra')
+        }
+
+        data {
+            data()
+            sourceSet = sourceSets.main
+
+            programArguments.addAll(
+                '--mod', project.mod_id,
+                '--all',
+                '--output', file('src/generated/resources/').getAbsolutePath(),
+                '--existing', file('src/main/resources/').getAbsolutePath()
+            )
+
+            programArguments.addAll('--existing-mod', 'gtceu')
+            programArguments.addAll('--existing-mod', 'ctpp')
+            programArguments.addAll('--existing-mod', 'biomancy')
+            programArguments.addAll('--existing-mod', 'expatternprovider')
+            programArguments.addAll('--existing-mod', 'botania')
+            programArguments.addAll('--existing-mod', 'bloodmagic')
+            programArguments.addAll('--existing-mod', 'create_new_age')
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+            sourceSet(sourceSets.client)
+        }
+    }
+}

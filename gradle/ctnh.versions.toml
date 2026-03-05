@@ -1,0 +1,180 @@
+[versions]
+jetbrains-annotations = "26.0.1"
+mixin = "0.8.5"
+mixinExtras = "0.5.0-rc.3"
+kotlinforforge = "4.10.0"
+graphlib = "3.0.4"
+
+ldlib = "1.0.48"
+create = "6.0.6-168"
+registrate = "MC1.20-1.3.11"
+configuration = "2.2.0"
+flywheel = "1.0.4"
+ponder = "1.0.78"
+kubejs = "2001.6.5-build.16"
+rhino = "2001.2.3-build.6"
+architectury = "9.2.14"
+geckolib = "4.4.9"
+ae2 = "15.4.10"
+curios = "5.9.1+1.20.1"
+arsnouveau = "4.12.7.264"
+botania = "1.20.1-450-FORGE"
+libx = "1.20.1-5.0.12"
+botarium = "2.3.4"
+resourcefullib = "2.1.28"
+resourcefulconfig = "2.1.2"
+adastra = "1.15.20"
+eio = "1.20.1-6.2.14-beta"
+tconstruct = "1.20.1-3.11.0.148"
+mantle = "1.20.1-1.11.94"
+
+## modrinth maven ##
+ali = "8DV7ECP9"
+bloodmagic = "bgY3aWtr"
+
+## cursemaven ##
+emi = "6420945"
+tmrv = "7259315"
+jade = "6855440"
+modernfix = "6719008"
+placebo = "6274231"
+createmetallurgy = "6741785"
+hostile = "5895036"
+biomancy = "5886758"
+biofactory = "6293100"
+constructionwand = "4684054"
+citadel = "7476570"
+alexscaves = "5848216"
+guideme = "6679102"
+glodium = "5226922"
+eae = "7472662"
+pcc = "7152160"
+eup2p = "6927538"
+omnicells = "7152251"
+merequester = "5689932"
+ae2wt = "7154316"
+ae2ct = "7182165"
+ae2cs = "7690555"
+betterp2p = "6015618"
+clothconfig = "5729105"
+buildinggadgets = "6850495"
+apotheosis = "6147871"
+attributelib = "5634071"
+sophisticatedcore = "7165739"
+patchouli = "4966125"
+mythicbotany = "5101899"
+extrabotany = "6818025"
+eventwrapper = "6788387"
+twilightforest = "5468648"
+lendercataclysm = "6906993"
+lionfishapi = "5922047"
+legendary = "6750561"
+avaritia = "7224119"
+createnewage = "6482827"
+createvintage = "6635459"
+createliquidfuel = "5217310"
+createoreexcavation = "6633054"
+creatediesel = "7350909"
+glitchcore = "5787839"
+ecliptic = "6752783"
+aeroblender = "4789008"
+terrablender = "5378180"
+aether = "5302178"
+deepaether = "5441091"
+architecturyapi = "5137938"
+ftblibrary = "5567591"
+ftbultimine = "5363345"
+toomanytinkers = "7488907"
+javd = "4803995"
+trenzalore = "4848244"
+jec = "6680042"
+
+[libraries]
+jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
+mixin                   = { module = "org.spongepowered:mixin", version.ref = "mixin" }
+mixinExtras             = { module = "io.github.llamalad7:mixinextras-common", version.ref = "mixinExtras" }
+kotlinforforge = { module = "thedarkcolour:kotlinforforge", version.ref = "kotlinforforge" }
+graphlib = { module = "dev.gigaherz.graph:GraphLib3", version.ref = "graphlib" }
+
+ldlib = { module = "com.lowdragmc.ldlib:ldlib-forge-1.20.1", version.ref = "ldlib" }
+create = { module = "com.simibubi.create:create-1.20.1", version.ref = "create" }
+registrate = { module = "com.tterrag.registrate:Registrate", version.ref = "registrate" }
+configuration = { module = "dev.toma.configuration:configuration-forge-1.20.1", version.ref = "configuration" }
+flywheel = { module = "dev.engine-room.flywheel:flywheel-forge-1.20.1", version.ref = "flywheel" }
+ponder = { module = "net.createmod.ponder:Ponder-Forge-1.20.1", version.ref = "ponder" }
+kubejs = { module = "dev.latvian.mods:kubejs-forge", version.ref = "kubejs" }
+rhino = { module = "dev.latvian.mods:rhino-forge", version.ref = "rhino" }
+architectury = { module = "dev.architectury:architectury-forge", version.ref = "architectury" }
+geckolib = { module = "software.bernie.geckolib:geckolib-forge-1.20.1", version.ref = "geckolib" }
+ae2 = { module = "appeng:appliedenergistics2-forge", version.ref = "ae2" }
+curios = { module = "top.theillusivec4.curios:curios-forge", version.ref = "curios" }
+arsnouveau = { module = "com.hollingsworth.ars_nouveau:ars_nouveau-1.20.1", version.ref = "arsnouveau" }
+botania = { module = "vazkii.botania:Botania", version.ref = "botania" }
+libx = { module = "org.moddingx:LibX", version.ref = "libx" }
+botarium = { module = "earth.terrarium.botarium:botarium-forge-1.20.1", version.ref = "botarium" }
+resourcefullib = { module = "com.teamresourceful.resourcefullib:resourcefullib-forge-1.20.1", version.ref = "resourcefullib" }
+resourcefulconfig = { module = "com.teamresourceful.resourcefulconfig:resourcefulconfig-forge-1.20.1", version.ref = "resourcefulconfig" }
+adastra = { module = "earth.terrarium.adastra:ad_astra-forge-1.20.1", version.ref = "adastra" }
+eio = { module = "com.enderio:EnderIO", version.ref = "eio" }
+tconstruct = { module = "slimeknights.tconstruct:TConstruct", version.ref = "tconstruct" }
+mantle = { module = "slimeknights.mantle:Mantle", version.ref = "mantle" }
+
+
+ali = { module = "maven.modrinth:advanced-loot-info", version.ref = "ali" }
+bloodmagic = { module = "maven.modrinth:blood-magic", version.ref = "bloodmagic" }
+
+emi = { module = "curse.maven:emi-580555", version.ref = "emi" }
+tmrv = { module = "curse.maven:tmrv-1194921", version.ref = "tmrv" }
+jade = { module = "curse.maven:jade-324717", version.ref = "jade" }
+modernfix = { module = "curse.maven:modernfix-790626", version.ref = "modernfix" }
+placebo = { module = "curse.maven:placebo-283644", version.ref = "placebo" }
+createmetallurgy = { module = "curse.maven:createmetallurgy-1007404", version.ref = "createmetallurgy" }
+hostile = { module = "curse.maven:hostile_neural_network-552574", version.ref = "hostile" }
+biomancy = { module = "curse.maven:biomancy-492939", version.ref = "biomancy" }
+biofactory = { module = "curse.maven:bio-factory-1136762", version.ref = "biofactory" }
+constructionwand = { module = "curse.maven:constructionwand-399558", version.ref = "constructionwand" }
+citadel = { module = "curse.maven:citadel-331936", version.ref = "citadel" }
+alexscaves = { module = "curse.maven:alexs-caves-924854", version.ref = "alexscaves" }
+guideme = { module = "curse.maven:guideme-1173950", version.ref = "guideme" }
+glodium = { module = "curse.maven:glodium-957920", version.ref = "glodium" }
+eae = { module = "curse.maven:ex-pattern-provider-892005", version.ref = "eae" }
+pcc = { module = "curse.maven:programmed-circuit-card-1150540", version.ref = "pcc" }
+eup2p = { module = "curse.maven:eu-p2p-tunnel-1065433", version.ref = "eup2p" }
+omnicells = { module = "curse.maven:omni-cells-1359517", version.ref = "omnicells" }
+merequester = { module = "curse.maven:merequester-688367", version.ref = "merequester" }
+ae2wt = { module = "curse.maven:applied-energistics-2-wireless-terminals-459929", version.ref = "ae2wt" }
+ae2ct = { module = "curse.maven:ae2-crafting-tree-1086241", version.ref = "ae2ct" }
+ae2cs = { module = "curse.maven:ae2-crystal-science-1435174", version.ref = "ae2cs" }
+betterp2p = { module = "curse.maven:betterp2p-538092", version.ref = "betterp2p" }
+clothconfig = { module = "curse.maven:cloth-config-348521", version.ref = "clothconfig" }
+buildinggadgets = { module = "curse.maven:building-gadgets-298187", version.ref = "buildinggadgets" }
+apotheosis = { module = "curse.maven:apotheosis-313970", version.ref = "apotheosis" }
+attributelib = { module = "curse.maven:attributelib-898963", version.ref = "attributelib" }
+sophisticatedcore = { module = "curse.maven:sophisticated-core-618298", version.ref = "sophisticatedcore" }
+patchouli = { module = "curse.maven:patchouli-306770", version.ref = "patchouli" }
+mythicbotany = { module = "curse.maven:mythicbotany-400058", version.ref = "mythicbotany" }
+extrabotany = { module = "curse.maven:extrabotany-reburn-1271869", version.ref = "extrabotany" }
+eventwrapper = { module = "curse.maven:event-wrapper-1256971", version.ref = "eventwrapper" }
+twilightforest = { module = "curse.maven:twilight_forest-227639", version.ref = "twilightforest" }
+lendercataclysm = { module = "curse.maven:lendercataclysm-551586", version.ref = "lendercataclysm" }
+lionfishapi = { module = "curse.maven:lionfish-api-1001614", version.ref = "lionfishapi" }
+legendary = { module = "curse.maven:legendary_survival_overhaul-840254", version.ref = "legendary" }
+avaritia = { module = "curse.maven:re-avaritia-623969", version.ref = "avaritia" }
+createnewage = { module = "curse.maven:create-new-age-905861", version.ref = "createnewage" }
+createvintage = { module = "curse.maven:createvintage-1255448", version.ref = "createvintage" }
+createliquidfuel = { module = "curse.maven:create-liquid-fuel-840734", version.ref = "createliquidfuel" }
+createoreexcavation = { module = "curse.maven:create-ore-excavation-649832", version.ref = "createoreexcavation" }
+creatediesel = { module = "curse.maven:create-diesel-generators-869316", version.ref = "creatediesel" }
+glitchcore = { module = "curse.maven:glitchcore-955399", version.ref = "glitchcore" }
+ecliptic = { module = "curse.maven:ecliptic_season-1118306", version.ref = "ecliptic" }
+aeroblender = { module = "curse.maven:aeroblender-879879", version.ref = "aeroblender" }
+terrablender = { module = "curse.maven:terrablender-563928", version.ref = "terrablender" }
+aether = { module = "curse.maven:aether-255308", version.ref = "aether" }
+deepaether = { module = "curse.maven:deep-aether-852465", version.ref = "deepaether" }
+architecturyapi = { module = "curse.maven:architectury-api-419699", version.ref = "architecturyapi" }
+ftblibrary = { module = "curse.maven:ftb-library-forge-404465", version.ref = "ftblibrary" }
+ftbultimine = { module = "curse.maven:ftb-ultimine-386134", version.ref = "ftbultimine" }
+toomanytinkers = { module = "curse.maven:too-many-tinkers-1437457", version.ref = "toomanytinkers" }
+javd = { module = "curse.maven:javd-370890", version.ref = "javd" }
+trenzalore = { module = "curse.maven:trenzalore-870210", version.ref = "trenzalore" }
+jec = { module = "curse.maven:just-enough-characters-250702", version.ref = "jec" }

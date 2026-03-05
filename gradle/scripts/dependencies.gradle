@@ -1,0 +1,55 @@
+dependencies {
+    compileOnly(ctnh.jetbrains.annotations)
+    annotationProcessor(variantOf(ctnh.mixin) { classifier("processor") })
+    compileOnly(annotationProcessor(ctnh.mixinExtras.get()))
+
+    modCompileOnly(project(path: ":modules:GregTech-Modern", configuration: "apiElements")) { transitive = false }
+    modRuntimeOnly(project(path: ":modules:GregTech-Modern", configuration: "runtimeElements")) { transitive = false }
+
+    // EMI, TMRV, Jade
+    modCompileOnly(ctnh.emi)
+    modCompileOnly(ctnh.tmrv)
+    modCompileOnly(ctnh.jade)
+
+    // GregTech
+    modCompileOnly(ctnh.ldlib)
+    modCompileOnly(ctnh.registrate)
+    modCompileOnly(ctnh.configuration)
+
+    // Create
+    modCompileOnly(ctnh.flywheel)
+    modCompileOnly(ctnh.ponder)
+    modCompileOnly(variantOf(ctnh.create) { classifier("slim") })
+
+    // KubeJS
+    modCompileOnly(ctnh.kubejs)
+    modCompileOnly(ctnh.rhino)
+    modCompileOnly(ctnh.architectury)
+
+    // LocalRuntime: in both client and server
+    // EMI, TMRV, Jade
+    modLocalRuntime(ctnh.emi)
+    modLocalRuntime(ctnh.tmrv)
+    modLocalRuntime(ctnh.jade)
+
+    // GregTech
+    modLocalRuntime(ctnh.ldlib)
+    modLocalRuntime(ctnh.registrate)
+    modLocalRuntime(ctnh.configuration)
+
+    // Create
+    modLocalRuntime(ctnh.flywheel)
+    modLocalRuntime(ctnh.ponder)
+    modLocalRuntime(variantOf(ctnh.create) { classifier("slim") })
+
+    // KubeJS
+    modLocalRuntime(ctnh.kubejs)
+    modLocalRuntime(ctnh.rhino)
+    modLocalRuntime(ctnh.architectury)
+
+    // ModernFix
+    modLocalRuntime(ctnh.modernfix)
+
+    // Just Enough Characters
+    modClientLocalRuntime(ctnh.jec)
+}

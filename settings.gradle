@@ -31,6 +31,9 @@ dependencyResolutionManagement {
         forge {
             from(files("modules/GregTech-Modern/gradle/forge.versions.toml"))
         }
+        ctnh {
+            from(files("gradle/ctnh.versions.toml"))
+        }
     }
 }
 
