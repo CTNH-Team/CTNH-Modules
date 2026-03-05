@@ -23,6 +23,17 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
 }
 
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            from(files("modules/GregTech-Modern/gradle/libs.versions.toml"))
+        }
+        forge {
+            from(files("modules/GregTech-Modern/gradle/forge.versions.toml"))
+        }
+    }
+}
+
 rootProject.name = 'CTNH-Multi'
 
 include "modules:CTNH-Bio"
@@ -31,3 +42,4 @@ include "modules:CTPP"
 include "modules:CTNH-Lib"
 include "modules:CTNH-Mana"
 include "modules:CTNH-Energy"
+include "modules:GregTech-Modern"
