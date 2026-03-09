@@ -82,8 +82,10 @@ terrablender = "5378180"
 aether = "5302178"
 deepaether = "5441091"
 architecturyapi = "5137938"
-ftblibrary = "5567591"
+ftblibrary = "7296748"
 ftbultimine = "5363345"
+ftbteams = "7499810"
+ftbchunks = "6431735"
 toomanytinkers = "7488907"
 javd = "4803995"
 trenzalore = "4848244"
@@ -174,6 +176,8 @@ deepaether = { module = "curse.maven:deep-aether-852465", version.ref = "deepaet
 architecturyapi = { module = "curse.maven:architectury-api-419699", version.ref = "architecturyapi" }
 ftblibrary = { module = "curse.maven:ftb-library-forge-404465", version.ref = "ftblibrary" }
 ftbultimine = { module = "curse.maven:ftb-ultimine-386134", version.ref = "ftbultimine" }
+ftbteams = {module = "curse.maven:ftb-teams-forge-404468", version.ref = "ftbteams"}
+ftbchunks = {module = "curse.maven:ftb-chunks-forge-314906", version.ref = "ftbchunks"}
 toomanytinkers = { module = "curse.maven:too-many-tinkers-1437457", version.ref = "toomanytinkers" }
 javd = { module = "curse.maven:javd-370890", version.ref = "javd" }
 trenzalore = { module = "curse.maven:trenzalore-870210", version.ref = "trenzalore" }
