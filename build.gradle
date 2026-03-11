@@ -37,6 +37,7 @@ configure(ctnhSubprojects) {
     apply plugin: 'net.neoforged.moddev.legacyforge'
     apply plugin: 'com.diffplug.spotless'
     apply plugin: 'io.freefair.lombok'
+    apply plugin: 'tech.vixhentx.ctnhlib-langextractor'
 
     version = mod_version
     group = maven_group
@@ -114,5 +115,19 @@ configure(ctnhSubprojects) {
 
     lombok {
         version = "1.18.38"
+    }
+
+    langExtractor {
+        inputJar.set(tasks.named('jar').flatMap { it.archiveFile })
+        outputDir.set(layout.buildDirectory.dir("generated/langs"))
+        gameResourcesDir.set(layout.projectDirectory.dir("src/generated/resources/assets/${mod_id}/lang"))
+    }
+
+    tasks.named('build') {
+        dependsOn('mergeLangsToGame')
+    }
+
+    afterEvaluate {
+        tasks.findByName('runData')?.finalizedBy('mergeLangsToGame')
     }
 }
