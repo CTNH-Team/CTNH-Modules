@@ -26,3 +26,6 @@
 	path = modules/GregTech-Modern
 	url = https://github.com/CTNH-Team/GregTech-Modern.git
 	branch = dev
+[submodule "buildSrc"]
+	path = buildSrc
+	url = https://github.com/CTNH-Team/CTNH-BuildUtil
