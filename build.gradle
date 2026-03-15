@@ -131,3 +131,57 @@ configure(ctnhSubprojects) {
         tasks.findByName('runData')?.finalizedBy('mergeLangsToGame')
     }
 }
+
+// CTNH-Lib 语言功能测试配置
+configure(project(':modules:CTNH-Lib')) {
+    // 添加测试 sourceSet
+    sourceSets {
+        test {
+            java {
+                srcDir 'src/test/java'
+            }
+            compileClasspath += main.output
+            runtimeClasspath += main.output
+        }
+    }
+
+    // 测试依赖
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    }
+
+    // 启用 JUnit 5
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events "passed", "skipped", "failed"
+            showStandardStreams = true
+        }
+    }
+
+    // 创建语言功能测试任务
+    tasks.register('testLang', JavaExec) {
+        group = 'ctnhlib'
+        description = 'Run CTNH-Lib language functionality tests'
+        
+        classpath = sourceSets.test.runtimeClasspath
+        mainClass = 'tech.vixhentx.mcmod.ctnhlib.langprovider.LangTest'
+        
+        // 依赖编译
+        dependsOn 'compileTestJava'
+        
+        // 测试输出
+        standardOutput = System.out
+        errorOutput = System.err
+        
+        doFirst {
+            println "Running CTNH-Lib Language Tests..."
+        }
+    }
+
+    // 让 build 任务依赖测试
+    tasks.named('build') {
+        dependsOn 'testLang'
+    }
+}
