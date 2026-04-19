@@ -91,6 +91,7 @@ toomanytinkers = "7488907"
 javd = "4803995"
 trenzalore = "4848244"
 jec = "6680042"
+jackseconomy = "6725961"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
@@ -184,3 +185,4 @@ toomanytinkers = { module = "curse.maven:too-many-tinkers-1437457", version.ref 
 javd = { module = "curse.maven:javd-370890", version.ref = "javd" }
 trenzalore = { module = "curse.maven:trenzalore-870210", version.ref = "trenzalore" }
 jec = { module = "curse.maven:just-enough-characters-250702", version.ref = "jec" }
+jackseconomy = { module = "curse.maven:jackseconomy-ctnhfork-1280460", version.ref = "jackseconomy"}
