@@ -29,6 +29,7 @@ legacyForge {
         client {
             client()
             sourceSet = sourceSets.client
+            jvmArgument('-Xmx8G')
             programArguments.addAll('--refresh-dependencies')
             systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
         }
