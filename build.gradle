@@ -1,3 +1,15 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath files("$rootDir/gradle/plugins/LangProvider.jar")
+        classpath 'org.ow2.asm:asm:9.6'
+        classpath 'org.ow2.asm:asm-tree:9.6'
+    }
+}
+
 plugins {
     id 'net.neoforged.moddev.legacyforge' version '2.0.91' apply(false)
     id 'com.diffplug.spotless' version '8.1.0' apply(false)
@@ -37,11 +49,16 @@ configure(ctnhSubprojects) {
     apply plugin: 'net.neoforged.moddev.legacyforge'
     apply plugin: 'com.diffplug.spotless'
     apply plugin: 'io.freefair.lombok'
+    apply plugin: 'com.ctnhlang.langprovider'
 
     version = mod_version
     group = maven_group
     base { archivesName = archives_base_name }
     java { sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17 }
+
+    ctnhLang {
+        modId = mod_id
+    }
 
     sourceSets {
         main.resources {
