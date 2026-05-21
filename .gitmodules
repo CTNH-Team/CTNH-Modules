@@ -26,3 +26,6 @@
 	path = modules/GregTech-Modern
 	url = https://github.com/CTNH-Team/GregTech-Modern.git
 	branch = dev
+[submodule "modules/CTNH-Astral"]
+	path = modules/CTNH-Astral
+	url = https://github.com/CTNH-Team/CTNH-Astral.git
