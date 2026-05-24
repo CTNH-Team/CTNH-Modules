@@ -91,7 +91,7 @@ trenzalore = "4848244"
 jec = "6680042"
 jackseconomy = "6725961"
 angelblock = "4690392"
-tconstruct = "8136848"
+tconstruct = "8137588"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
