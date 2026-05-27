@@ -32,3 +32,9 @@ forge*changelog.txt
 
 # vscode
 .vscode
+
+#opencode
+.opencode/
+.omo/
+
+.env
