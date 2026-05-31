@@ -26,7 +26,7 @@ CTNH-Modules/
 - Runtime/datagen args: `gradle/scripts/moddevgradle.gradle`. `runData` writes `src/generated/resources`.
 - Formatting: `gradle/scripts/spotless.gradle`, `spotless/`. Java only; `spotless:off/on` appears around large registries.
 - CI release artifact: `.github/workflows/build.yml`. Runs `./gradlew :modules:CTNH-Core:build`; uploads `modules/CTNH-Core/build/libs/*.jar`.
-- Module roles: `modules/AGENTS.md`. Start there before editing module code.
+- Shared Ponder framework: `modules/CTNH-Lib/src/main/java/tech/vixhentx/mcmod/ctnhlib/client/ponder/CTNHPonderSceneBuilder.java`. Core/Energy keep module adapters and scene/tag registrations.
 
 ## CODE MAP
 - `CTNHCore`: mod entry at `modules/CTNH-Core/src/main/java/io/github/cpearl0/ctnhcore/CTNHCore.java`; main aggregation/core mod entry.
@@ -42,6 +42,7 @@ CTNH-Modules/
 - `sourceSets.main.resources` includes both `src/main/resources` and `src/generated/resources`.
 - Module `README.md` files mirror root build snippets; prefer root scripts for truth.
 - Recipe placement policy: most new recipes should live in CTNH-Core; Core may depend on other CTNH modules, but other modules must not depend on Core.
+- Ponder placement policy: reusable scene builder/text helpers live in CTNH-Lib; Core/Energy keep only module adapters, plugins, scene/tag registrations, and module-specific helpers.
 - No CTNH test suites are present; only `modules/GregTech-Modern/src/test/java` has tests.
 
 ## ANTI-PATTERNS (THIS PROJECT)
@@ -50,6 +51,7 @@ CTNH-Modules/
 - Do not assume one package namespace: modules use `io.github.cpearl0`, `com.moguang`, `tech.luckyblock`, `tech.vixhentx`, `com.mo_guang`, and `com.ctnh`.
 - Do not add new modules only in Gradle; README requires adding under `modules/` and including in `settings.gradle`.
 - Do not introduce dependencies from feature modules back to CTNH-Core; dependency direction is Core -> modules, not modules -> Core.
+- Do not move module-specific Ponder content into CTNH-Lib: scene/tag registrations stay in feature modules, and Energy's `AE2CablePonderHelper` stays in CTNH-Energy.
 
 ## COMMANDS
 ```bash

@@ -28,6 +28,7 @@ modules/
 ## REGISTRATION ENTRYPOINTS
 - Cross-module rule: common recipes usually belong in `CTNH-Core`; feature modules expose registries/content that Core recipes can consume.
 - Standard CTNH pattern: `<Prefix>Registrate` owns the module registrate, `<Prefix>Blocks` / `<Prefix>Items` hold block/item entries, `<Prefix>Machines` / `<Prefix>Multiblock*` hold GTCEu machine entries, `<Prefix>RecipeTypes` and recipe data classes drive generated recipes.
+- Ponder pattern: shared `CTNHPonderSceneBuilder` lives in CTNH-Lib; modules provide thin adapters plus their own `PonderPlugin`, scene registration, tag registration, and concrete scene classes.
 - Module-specific details live in each child `AGENTS.md`; use this file only to pick the right module.
 
 ## CONVENTIONS
@@ -40,5 +41,6 @@ modules/
 ## ANTI-PATTERNS
 - Do not move code between modules without checking Gradle dependencies and mod runtime load order.
 - Do not make feature modules depend on CTNH-Core; Core is allowed to depend on modules for aggregate recipes/content, not the reverse.
+- Do not put feature Ponder scenes, tags, plugins, or AE2-specific helpers in CTNH-Lib; only shared builder/text framework belongs there.
 - Do not edit `modules/libs` as source code; it is for local jar resolution.
 - Do not duplicate parent build instructions in child docs; root Gradle scripts are the source of truth.
