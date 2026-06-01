@@ -61,6 +61,7 @@ apotheosis = "6461960"
 attributelib = "5634071"
 sophisticatedcore = "7645911"
 sophisticatedbackpacks = "7645913"
+sophisticatedstorage = "7603098"
 patchouli = "4966125"
 mythicbotany = "5101899"
 extrabotany = "6818025"
@@ -91,7 +92,16 @@ trenzalore = "4848244"
 jec = "6680042"
 jackseconomy = "6725961"
 angelblock = "4690392"
+angelring = "5887716"
 tconstruct = "8137588"
+gtportal = "7884803"
+functionalstorage = "6702553"
+titanium = "5468426"
+farmersdelight = "6154802"
+createcafe = "5237090"
+ecologics = "4857272"
+mynethersdelight = "5673085"
+immersiveaircraft = "5898208"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
@@ -155,6 +165,7 @@ apotheosis = { module = "curse.maven:apotheosis-313970", version.ref = "apotheos
 attributelib = { module = "curse.maven:attributelib-898963", version.ref = "attributelib" }
 sophisticatedcore = { module = "curse.maven:sophisticated-core-618298", version.ref = "sophisticatedcore" }
 sophisticatedbackpacks = { module = "curse.maven:sophisticated-backpacks-422301", version.ref = "sophisticatedbackpacks" }
+sophisticatedstorage = { module = "curse.maven:sophisticated-storage-619320", version.ref = "sophisticatedstorage" }
 patchouli = { module = "curse.maven:patchouli-306770", version.ref = "patchouli" }
 mythicbotany = { module = "curse.maven:mythicbotany-400058", version.ref = "mythicbotany" }
 extrabotany = { module = "curse.maven:extrabotany-reburn-1271869", version.ref = "extrabotany" }
@@ -185,4 +196,13 @@ trenzalore = { module = "curse.maven:trenzalore-870210", version.ref = "trenzalo
 jec = { module = "curse.maven:just-enough-characters-250702", version.ref = "jec" }
 jackseconomy = { module = "curse.maven:jackseconomy-ctnhfork-1280460", version.ref = "jackseconomy"}
 angelblock = { module = "curse.maven:angel-block-renewed-659250", version.ref = "angelblock"}
+angelring = { module = "curse.maven:angel-ring-333396", version.ref = "angelring" }
 tconstruct = { module = "curse.maven:gtconstruct-1313873", version.ref = "tconstruct" }
+gtportal = { module = "curse.maven:gt-portal-1459620", version.ref = "gtportal" }
+functionalstorage = { module = "curse.maven:functional-storage-556861", version.ref = "functionalstorage" }
+titanium = { module = "curse.maven:titanium-287342", version.ref = "titanium" }
+farmersdelight = { module = "curse.maven:farmers-delight-398521", version.ref = "farmersdelight" }
+createcafe = { module = "curse.maven:create-cafe-542235", version.ref = "createcafe" }
+ecologics = { module = "curse.maven:ecologics-570463", version.ref = "ecologics" }
+mynethersdelight = { module = "curse.maven:my-nethers-delight-1003673", version.ref = "mynethersdelight" }
+immersiveaircraft = { module = "curse.maven:immersive-aircraft-666014", version.ref = "immersiveaircraft" }
