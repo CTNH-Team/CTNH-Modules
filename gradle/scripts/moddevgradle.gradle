@@ -59,6 +59,8 @@ legacyForge {
             programArguments.addAll('--existing-mod', 'botania')
             programArguments.addAll('--existing-mod', 'bloodmagic')
             programArguments.addAll('--existing-mod', 'create_new_age')
+            programArguments.addAll('--existing-mod', 'immersive_aircraft')
+            programArguments.addAll('--existing-mod', 'sophisticatedstorage')
         }
     }
 

@@ -61,6 +61,7 @@ apotheosis = "6461960"
 attributelib = "5634071"
 sophisticatedcore = "7645911"
 sophisticatedbackpacks = "7645913"
+sophisticatedstorage = "7603098"
 patchouli = "4966125"
 mythicbotany = "5101899"
 extrabotany = "6818025"
@@ -75,6 +76,7 @@ createvintage = "7783979"
 createliquidfuel = "5217310"
 createoreexcavation = "6633054"
 creatediesel = "7711783"
+immersiveaircraft = "6972825"
 glitchcore = "5787839"
 ecliptic = "6752783"
 aeroblender = "4789008"
@@ -155,6 +157,7 @@ apotheosis = { module = "curse.maven:apotheosis-313970", version.ref = "apotheos
 attributelib = { module = "curse.maven:attributelib-898963", version.ref = "attributelib" }
 sophisticatedcore = { module = "curse.maven:sophisticated-core-618298", version.ref = "sophisticatedcore" }
 sophisticatedbackpacks = { module = "curse.maven:sophisticated-backpacks-422301", version.ref = "sophisticatedbackpacks" }
+sophisticatedstorage = { module = "curse.maven:sophisticated-storage-619320", version.ref = "sophisticatedstorage" }
 patchouli = { module = "curse.maven:patchouli-306770", version.ref = "patchouli" }
 mythicbotany = { module = "curse.maven:mythicbotany-400058", version.ref = "mythicbotany" }
 extrabotany = { module = "curse.maven:extrabotany-reburn-1271869", version.ref = "extrabotany" }
@@ -169,6 +172,7 @@ createvintage = { module = "curse.maven:createvintage-1255448", version.ref = "c
 createliquidfuel = { module = "curse.maven:create-liquid-fuel-840734", version.ref = "createliquidfuel" }
 createoreexcavation = { module = "curse.maven:create-ore-excavation-649832", version.ref = "createoreexcavation" }
 creatediesel = { module = "curse.maven:create-diesel-generators-869316", version.ref = "creatediesel" }
+immersiveaircraft = { module = "curse.maven:immersive-aircraft-666014", version.ref = "immersiveaircraft" }
 glitchcore = { module = "curse.maven:glitchcore-955399", version.ref = "glitchcore" }
 ecliptic = { module = "curse.maven:ecliptic_season-1118306", version.ref = "ecliptic" }
 aeroblender = { module = "curse.maven:aeroblender-879879", version.ref = "aeroblender" }
