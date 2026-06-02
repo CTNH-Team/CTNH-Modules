@@ -102,7 +102,6 @@ farmersdelight = "6154802"
 createcafe = "5237090"
 ecologics = "4857272"
 mynethersdelight = "5673085"
-immersiveaircraft = "5898208"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
@@ -207,4 +206,3 @@ farmersdelight = { module = "curse.maven:farmers-delight-398521", version.ref = 
 createcafe = { module = "curse.maven:create-cafe-542235", version.ref = "createcafe" }
 ecologics = { module = "curse.maven:ecologics-570463", version.ref = "ecologics" }
 mynethersdelight = { module = "curse.maven:my-nethers-delight-1003673", version.ref = "mynethersdelight" }
-immersiveaircraft = { module = "curse.maven:immersive-aircraft-666014", version.ref = "immersiveaircraft" }
