@@ -101,6 +101,7 @@ farmersdelight = "6154802"
 createcafe = "5237090"
 ecologics = "4857272"
 mynethersdelight = "5673085"
+immersiveaircraft = "6972825"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
