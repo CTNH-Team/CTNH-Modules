@@ -62,6 +62,9 @@ CTNH-Modules/
 ./gradlew :modules:<ModuleName>:spotlessApply
 ```
 
+## CTPP RECIPE TYPES
+CTPP registers 8 custom GT recipe types (kinetic/electric via `StressRecipeCapability`), 3 Create fan processing recipes, and 23 wrapped Create/addon recipe builders (vanilla, Diesel Generators, Metallurgy, Vintage). Full table and infrastructure details → [modules/CTPP/AGENTS.md](modules/CTPP/AGENTS.md).
+
 ## NOTES
 - CI path filter rebuilds only for `modules/**`, `gradle/**`, Gradle files, wrapper files, and `.github/**`.
 - Root `ctnhSubprojects` excludes `:modules:GregTech-Modern`; shared CTNH scripts do not configure GTCEu.
