@@ -38,3 +38,5 @@ forge*changelog.txt
 .omo/
 
 .env
+.reasonix/
+.codegraph
