@@ -93,7 +93,7 @@ jec = "6680042"
 jackseconomy = "6725961"
 angelblock = "4690392"
 angelring = "5887716"
-tconstruct = "8137588"
+tconstruct = "8210489"
 gtportal = "7884803"
 functionalstorage = "6702553"
 titanium = "5468426"
@@ -102,6 +102,7 @@ createcafe = "5237090"
 ecologics = "4857272"
 mynethersdelight = "5673085"
 immersiveaircraft = "6972825"
+emiaccelerator="8136405"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
@@ -206,3 +207,4 @@ farmersdelight = { module = "curse.maven:farmers-delight-398521", version.ref = 
 createcafe = { module = "curse.maven:create-cafe-542235", version.ref = "createcafe" }
 ecologics = { module = "curse.maven:ecologics-570463", version.ref = "ecologics" }
 mynethersdelight = { module = "curse.maven:my-nethers-delight-1003673", version.ref = "mynethersdelight" }
+emiaccelerator = { module = "curse.maven:emiaccelerator-1542062", version.ref = "emiaccelerator" }
