@@ -46,7 +46,7 @@ jobs:
       - name: Build
         if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
         working-directory: CTNH-Modules
-        run: ./gradlew :modules:CTNH-Core:build
+        run: ./gradlew :modules:CTNH-Core:build --refresh-dependencies
 
       - name: Version Suffix
         if: github.event_name != 'release' && (steps.filter.outputs.code == 'true' || github.event_name == 'workflow_dispatch')
