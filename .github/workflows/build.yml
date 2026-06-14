@@ -43,10 +43,6 @@ jobs:
           token: ${{ github.token }}
           module_name: ${{ env.MODULE_NAME }}
 
-      - name: Clean Gradle Cache
-        if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
-        run: rm -rf ~/.gradle/caches/transforms-* ~/.gradle/caches/jars-*
-
       - name: Build
         if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
         working-directory: CTNH-Modules
