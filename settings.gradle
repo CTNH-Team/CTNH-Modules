@@ -46,4 +46,7 @@ include "modules:CTNH-Lib"
 include "modules:CTNH-Mana"
 include "modules:CTNH-Energy"
 include "modules:GregTech-Modern"
-include "modules:CTNH-Astral"
+def astralDir = file("modules/CTNH-Astral")
+if (astralDir.exists() && astralDir.listFiles()?.length > 0) {
+    include "modules:CTNH-Astral"
+}
