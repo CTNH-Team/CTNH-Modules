@@ -1,0 +1,26 @@
+// Strip JAR signatures from Forge JARs before lang injection tasks.
+// JarFile verification throws SecurityException when ModDevGradle
+// artifact transforms modify signed JAR entries (SHA-384 digest mismatch).
+// Only used on CI — Windows developers don't have the 'zip' command.
+allprojects {
+    afterEvaluate {
+        tasks.configureEach {
+            if (it.name.startsWith('injectLangBytecode')) {
+                it.doFirst {
+                    it.compileClasspath.files.each { file ->
+                        if (file.name.contains('forge') && file.name.endsWith('.jar') && file.exists()) {
+                            ant.exec(executable: 'zip', resultproperty: 'zipResult',
+                                     failonerror: false) {
+                                arg(value: '-d')
+                                arg(value: file.absolutePath)
+                                arg(value: 'META-INF/*.SF')
+                                arg(value: 'META-INF/*.RSA')
+                                arg(value: 'META-INF/*.DSA')
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
