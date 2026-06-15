@@ -134,26 +134,4 @@ configure(ctnhSubprojects) {
     lombok {
         version = "1.18.38"
     }
-
-    // Strip JAR signatures from Forge JARs before lang injection tasks,
-    // otherwise JarFile verification throws SecurityException when
-    // ModDevGradle artifact transforms modify signed JAR entries.
-    tasks.configureEach {
-        if (it.name.startsWith('injectLangBytecode')) {
-            it.doFirst {
-                it.compileClasspath.files.each { file ->
-                    if (file.name.contains('forge') && file.name.endsWith('.jar') && file.exists()) {
-                        project.ant.exec(executable: 'zip', resultproperty: 'zipResult',
-                                         failonerror: false) {
-                            arg(value: '-d')
-                            arg(value: file.absolutePath)
-                            arg(value: 'META-INF/*.SF')
-                            arg(value: 'META-INF/*.RSA')
-                            arg(value: 'META-INF/*.DSA')
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
