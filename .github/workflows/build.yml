@@ -43,12 +43,34 @@ jobs:
           token: ${{ github.token }}
           module_name: ${{ env.MODULE_NAME }}
 
+      - name: Print Toolchain Info
+        if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+        run: |
+          echo "=== System JAVA_HOME ==="
+          echo "JAVA_HOME=$JAVA_HOME"
+          "$JAVA_HOME/bin/java" -version 2>&1
+          echo "=== Gradle JDK cache ==="
+          ls -la ~/.gradle/jdks/ 2>/dev/null || echo "(empty)"
+          echo "=== Gradle toolchains ==="
+          cat ~/.m2/toolchains.xml 2>/dev/null || echo "(no toolchains.xml)"
+
+      - name: Clean Gradle JDK Cache
+        if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
+        run: rm -rf ~/.gradle/jdks
+
       - name: Build
         if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
         working-directory: CTNH-Modules
         env:
           GRADLE_OPTS: -Dorg.gradle.java.installations.auto-download=false
-        run: ./gradlew :modules:CTNH-Core:build --init-script gradle/strip-forge-signatures.init.gradle --stacktrace
+        run: |
+          set +e
+          ./gradlew :modules:CTNH-Core:build --init-script gradle/strip-forge-signatures.init.gradle --info --stacktrace > /tmp/build.log 2>&1
+          BUILD_EXIT=$?
+          echo "=== Toolchain / JDK info ==="
+          grep -iE "Toolchain|launcher.*[Jj]dk|java.home|jvm.*version|using jdk|provisioned.*jdk|resolution result|JDK [0-9]" /tmp/build.log | head -30 || true
+          echo "=== Build exit code: $BUILD_EXIT ==="
+          exit $BUILD_EXIT
 
       - name: Version Suffix
         if: github.event_name != 'release' && (steps.filter.outputs.code == 'true' || github.event_name == 'workflow_dispatch')
