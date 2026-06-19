@@ -1,7 +1,7 @@
 # MODULES KNOWLEDGE BASE
 
 ## OVERVIEW
-`modules/` contains one Gradle subproject per mod plus the vendored `GregTech-Modern` upstream dependency. CTNH modules share root build logic; each module keeps its own mod id, resources, registries, datagen, and optional GTCEu addon.
+`modules/` contains one Gradle subproject per CTNH mod plus the vendored `GregTech-Modern` upstream dependency. CTNH modules share root build logic; each keeps its own mod id, resources, registries, datagen, and optional GTCEu addon.
 
 ## STRUCTURE
 ```text
@@ -13,6 +13,7 @@ modules/
 ├── CTNH-Mana/        # Botania/Blood Magic/magic content
 ├── CTNH-Astral/      # astral/worldgen content
 ├── CTPP/             # Create/GregTech compatibility
+├── Create-Enough-Items/ # EMI sidebar/search/recipe-page integration
 ├── GregTech-Modern/  # vendored GTCEu upstream
 └── libs/             # local flatDir jars
 ```
@@ -35,7 +36,7 @@ modules/
 - Child modules may have standalone `settings.gradle` / `build.gradle`, but root `settings.gradle` is authoritative for this workspace.
 - Package names are not normalized across modules; follow the module's existing namespace.
 - Most new recipes should be implemented in `modules/CTNH-Core`; feature modules may expose items/machines/data that Core recipes consume.
-- Registry classes tend to use module prefixes: `CTNH*`, `CB*`, `CE*`, `CM*`, `CA*`, `CTPP*`.
+- Registry classes tend to use module prefixes: `CTNH*`, `CB*`, `CE*`, `CM*`, `CA*`, `CTPP*`; Create-Enough-Items uses `CEI*`.
 - Large multiblock registry files often use `spotless:off/on`; preserve the local formatting boundary.
 
 ## ANTI-PATTERNS

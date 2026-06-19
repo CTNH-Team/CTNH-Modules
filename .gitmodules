@@ -29,3 +29,7 @@
 [submodule "modules/CTNH-Astral"]
 	path = modules/CTNH-Astral
 	url = https://github.com/CTNH-Team/CTNH-Astral.git
+[submodule "modules/Create-Enough-Items"]
+	path = modules/Create-Enough-Items
+	url = https://github.com/CTNH-Team/Create-Enough-Items.git
+	branch = dev
