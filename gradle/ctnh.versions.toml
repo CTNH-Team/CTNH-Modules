@@ -30,9 +30,12 @@ mantle = "1.20.1-1.11.104"
 ## modrinth maven ##
 ali = "8DV7ECP9"
 bloodmagic = "bgY3aWtr"
+l2hostility = "ou0FsY4Y"
+l2library = "lg7mW3eS"
+l2complements = "TvdiYrC4"
 
 ## cursemaven ##
-emi = "6420945"
+emi = "8081375"
 tmrv = "7259315"
 jade = "6855440"
 modernfix = "6719008"
@@ -136,6 +139,9 @@ mantle = { module = "slimeknights.mantle:Mantle", version.ref = "mantle" }
 
 ali = { module = "maven.modrinth:advanced-loot-info", version.ref = "ali" }
 bloodmagic = { module = "maven.modrinth:blood-magic", version.ref = "bloodmagic" }
+l2hostility = { module = "maven.modrinth:l2hostility", version.ref = "l2hostility" }
+l2library = { module = "maven.modrinth:l2library", version.ref = "l2library" }
+l2complements = { module = "maven.modrinth:l2-complements", version.ref = "l2complements" }
 
 emi = { module = "curse.maven:emi-580555", version.ref = "emi" }
 tmrv = { module = "curse.maven:tmrv-1194921", version.ref = "tmrv" }
