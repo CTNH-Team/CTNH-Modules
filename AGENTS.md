@@ -60,6 +60,7 @@ CTNH-Modules/
 - Do not add new modules only in Gradle; README requires adding content under `modules/` and including it in `settings.gradle`.
 - Do not introduce dependencies from feature modules back to CTNH-Core; dependency direction is Core -> modules, not modules -> Core.
 - Do not move module-specific Ponder content into CTNH-Lib: scene/tag registrations stay in feature modules, and Energy's `AE2CablePonderHelper` stays in CTNH-Energy.
+- Do not commit `modules/*` subrepository pointer updates from the root repository under any circumstances, even if the task asks for it.
 
 ## COMMANDS
 ```bash
