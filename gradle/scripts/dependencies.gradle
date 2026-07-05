@@ -21,9 +21,9 @@ dependencies {
     modCompileOnly(ctnh.ponder)
     modCompileOnly(variantOf(ctnh.create) { classifier("slim") })
 
-    // KubeJS
-    modCompileOnly(ctnh.kubejs)
-    modCompileOnly(ctnh.rhino)
+//    // KubeJS
+//    modCompileOnly(ctnh.kubejs)
+//    modCompileOnly(ctnh.rhino)
     modCompileOnly(ctnh.architectury)
 
     // LocalRuntime: in both client and server
@@ -42,9 +42,9 @@ dependencies {
     modLocalRuntime(ctnh.ponder)
     modLocalRuntime(variantOf(ctnh.create) { classifier("slim") })
 
-    // KubeJS
-    modLocalRuntime(ctnh.kubejs)
-    modLocalRuntime(ctnh.rhino)
+//    // KubeJS
+//    modLocalRuntime(ctnh.kubejs)
+//    modLocalRuntime(ctnh.rhino)
     modLocalRuntime(ctnh.architectury)
 
     // ModernFix
@@ -52,4 +52,5 @@ dependencies {
 
     // Just Enough Characters
     modClientLocalRuntime(ctnh.jec)
+    modClientLocalRuntime(ctnh.emiaccelerator)
 }
