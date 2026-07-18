@@ -189,15 +189,6 @@ runs:
         distribution: temurin
         java-version: '17.0.16'
 
-    - name: Print Java Version
-      shell: bash
-      run: |
-        echo "=== JAVA_HOME: $JAVA_HOME ==="
-        echo "=== javac version ==="
-        javac -version
-        echo "=== java version ==="
-        java -version
-
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
       with:
