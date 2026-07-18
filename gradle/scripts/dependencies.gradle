@@ -52,5 +52,5 @@ dependencies {
 
     // Just Enough Characters
     modClientLocalRuntime(ctnh.jec)
-    modClientLocalRuntime(ctnh.emiaccelerator)
+    // modClientLocalRuntime(ctnh.emiaccelerator)
 }
