@@ -166,7 +166,7 @@ runs:
         repository: ${{ inputs.ctpp_repository }}
         ref: ${{ inputs.ctpp_ref }}
         path: CTNH-Modules/modules/CTPP
-     - name: Checkout Create-Enough-Items
+    - name: Checkout Create-Enough-Items
       if: ${{ inputs.module_name != 'Create-Enough-Items' }}
       uses: actions/checkout@v4
       with:
