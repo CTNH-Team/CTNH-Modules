@@ -76,6 +76,10 @@ inputs:
     description: CTPP repository.
     required: false
     default: CTNH-Team/CTPP
+  cei_repository:
+    description: Create-Enough-Items repository.
+    required: false
+    default: CTNH-Team/Create-Enough-Items
   ctpp_ref:
     description: CTPP ref.
     required: false
