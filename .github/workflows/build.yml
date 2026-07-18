@@ -43,11 +43,6 @@ jobs:
           token: ${{ github.token }}
           module_name: ${{ env.MODULE_NAME }}
 
-      - name: Clean Gradle JDK Cache
-        if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
-        run: |
-          rm -rf ~/.gradle/jdks
-          sudo rm -rf /usr/lib/jvm/temurin-17-jdk-amd64
 
       - name: Build
         if: steps.filter.outputs.code == 'true' || github.event_name == 'release' || github.event_name == 'workflow_dispatch'
