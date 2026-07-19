@@ -54,7 +54,7 @@ jobs:
           javac -version
           java -version
           echo "=== Gradle build ==="
-          ./gradlew :modules:CTNH-Core:build --init-script gradle/strip-forge-signatures.init.gradle --stacktrace
+          ./gradlew :modules:CTNH-Core:compileJava --init-script gradle/strip-forge-signatures.init.gradle --stacktrace
 
       - name: Version Suffix
         if: github.event_name != 'release' && (steps.filter.outputs.code == 'true' || github.event_name == 'workflow_dispatch')
