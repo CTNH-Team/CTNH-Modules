@@ -113,6 +113,7 @@ configure(ctnhSubprojects) {
             "mod_description"  : mod_description,
             "forge_version"    : forge_version.split("\\.")[0],
             "minecraft_version": minecraft_version,
+            "ldlib_version"    : ctnh.versions.ldlib.get(),
             "gtceu_version"    : gtceu_version,
         ]
 
