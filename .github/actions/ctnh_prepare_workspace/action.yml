@@ -88,7 +88,7 @@ inputs:
   gtm_ref:
     description: GTM ref.
     required: false
-    default: dev
+    default: ctnh
 
 runs:
   using: composite
@@ -176,7 +176,7 @@ runs:
       uses: actions/setup-java@v4
       with:
         distribution: temurin
-        java-version: '17'
+        java-version: '17.0.16'
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@v4
