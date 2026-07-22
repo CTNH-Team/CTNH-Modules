@@ -4,7 +4,11 @@ mixin {
 }
 
 legacyForge {
-    version = project.minecraft_version + '-' + project.forge_version
+
+    enable {
+        forgeVersion = project.minecraft_version + '-' + project.forge_version
+        disableRecompilation = false
+    }
 
     parchment {
         mappingsVersion = project.mapping_version
