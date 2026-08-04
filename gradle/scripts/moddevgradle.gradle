@@ -57,6 +57,7 @@ legacyForge {
             )
 
             programArguments.addAll('--existing-mod', 'gtceu')
+            programArguments.addAll('--existing-mod', 'create')
             programArguments.addAll('--existing-mod', 'ctpp')
             programArguments.addAll('--existing-mod', 'biomancy')
             programArguments.addAll('--existing-mod', 'expatternprovider')
