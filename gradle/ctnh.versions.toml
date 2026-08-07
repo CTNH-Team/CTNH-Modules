@@ -106,6 +106,7 @@ ecologics = "4857272"
 mynethersdelight = "5673085"
 immersiveaircraft = "6972825"
 emiaccelerator="8136405"
+arscreo = "6265696"
 
 [libraries]
 jetbrains-annotations   = { module = "org.jetbrains:annotations", version.ref = "jetbrains-annotations" }
@@ -127,6 +128,7 @@ geckolib = { module = "software.bernie.geckolib:geckolib-forge-1.20.1", version.
 ae2 = { module = "appeng:appliedenergistics2-forge", version.ref = "ae2" }
 curios = { module = "top.theillusivec4.curios:curios-forge", version.ref = "curios" }
 arsnouveau = { module = "com.hollingsworth.ars_nouveau:ars_nouveau-1.20.1", version.ref = "arsnouveau" }
+arscreo = { module = "curse.maven:ars-creo-575698", version.ref = "arscreo" }
 botania = { module = "vazkii.botania:Botania", version.ref = "botania" }
 libx = { module = "org.moddingx:LibX", version.ref = "libx" }
 botarium = { module = "earth.terrarium.botarium:botarium-forge-1.20.1", version.ref = "botarium" }
