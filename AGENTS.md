@@ -32,15 +32,23 @@ CTNH-Modules is a Gradle multi-project workspace for Create: New Horizon core mo
 
 `build/`, `.gradle/`, `run/`, `.omo/`, `.codex/`, and `.claude/` are local build, runtime, index, or agent state. They are not implementation sources. There is no local `docs/` directory: module guides are hosted in the separate `CTNH-Docs` repository and fetched via webfetch only.
 
-## DOCS ACCESS (CTNH-Docs)
-Module guides are NOT stored in this worktree. They live in the separate repository `CTNH-Team/CTNH-Docs` and are fetched ONLY via webfetch from the raw URL below; do not read them from the local filesystem or clone the repository into this workspace.
+## DOCS ACCESS (ctnh-docs skill)
+Module guides are NOT stored in this worktree. They are published as the **`ctnh-docs` skill** from the separate repository `CTNH-Team/CTNH-Docs` (released daily with a date-versioned tag like `2026-08-07`).
 
-```
-https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/docs/<Module>/AGENTS.md
-https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/docs/<Module>/<domain>/AGENTS.md
-```
+1. **If the `ctnh-docs` skill is installed** (present in the skills directory): use it directly. Read `docs/<Module>/AGENTS.md` and `docs/<Module>/<domain>/AGENTS.md` from the skill as the authoritative guides.
+2. **If the skill is NOT installed**: download it first from the latest release, then use it:
+   ```
+   https://github.com/CTNH-Team/CTNH-Docs/releases/latest
+   ```
+   Download the asset `ctnh-docs-skill-<date>.zip`, extract it into the `~/.agents/skills/` directory (the zip contains a `ctnh-docs/` folder with `SKILL.md`).
+3. **Fallback when the skill is unavailable or stale**: webfetch the raw guide from CTNH-Docs (also date-versioned on `main`):
+   ```
+   https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/docs/<Module>/AGENTS.md
+   https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/docs/<Module>/<domain>/AGENTS.md
+   ```
+   Do NOT read guides from the local filesystem or clone the repository into this workspace.
 
-Update flow: edit guides in the `CTNH-Docs` repository, commit and push there; this file's DOMAIN GUIDE ROUTING table is the routing source of truth and must stay in sync.
+Update flow: edit guides in the `CTNH-Docs` repository, commit and push there; the release workflow packages them into the `ctnh-docs` skill zip. This file's DOMAIN GUIDE ROUTING table is the routing source of truth and must stay in sync.
 
 ## WHERE TO LOOK
 | Task | Location | Notes |
