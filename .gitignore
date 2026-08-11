@@ -43,3 +43,6 @@ forge*changelog.txt
 
 #codex
 .gradle-codex/
+.codex/
+
+.mimosa/
