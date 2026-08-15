@@ -97,7 +97,6 @@ jackseconomy = "6725961"
 angelblock = "4690392"
 angelring = "5887716"
 tconstruct = "8210489"
-gtportal = "7884803"
 functionalstorage = "6702553"
 titanium = "5468426"
 farmersdelight = "6154802"
@@ -208,7 +207,6 @@ jackseconomy = { module = "curse.maven:jackseconomy-ctnhfork-1280460", version.r
 angelblock = { module = "curse.maven:angel-block-renewed-659250", version.ref = "angelblock"}
 angelring = { module = "curse.maven:angel-ring-333396", version.ref = "angelring" }
 tconstruct = { module = "curse.maven:gtconstruct-1313873", version.ref = "tconstruct" }
-gtportal = { module = "curse.maven:gt-portal-1459620", version.ref = "gtportal" }
 functionalstorage = { module = "curse.maven:functional-storage-556861", version.ref = "functionalstorage" }
 titanium = { module = "curse.maven:titanium-287342", version.ref = "titanium" }
 farmersdelight = { module = "curse.maven:farmers-delight-398521", version.ref = "farmersdelight" }
