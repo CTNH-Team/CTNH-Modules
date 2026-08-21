@@ -47,3 +47,5 @@ forge*changelog.txt
 .codex/
 
 .mimosa/
+.dsh/
+dsh-usage/
