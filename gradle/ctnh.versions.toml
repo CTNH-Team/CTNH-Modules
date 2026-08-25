@@ -57,6 +57,7 @@ merequester = "8298547"
 ae2wt = "7251206"
 ae2ct = "7182165"
 ae2cs = "8324630"
+ae2pw = "7664051"
 betterp2p = "6015618"
 clothconfig = "5729105"
 buildinggadgets = "6850495"
@@ -166,6 +167,7 @@ merequester = { module = "curse.maven:merequester-688367", version.ref = "merequ
 ae2wt = { module = "curse.maven:applied-energistics-2-wireless-terminals-459929", version.ref = "ae2wt" }
 ae2ct = { module = "curse.maven:ae2-crafting-tree-1086241", version.ref = "ae2ct" }
 ae2cs = { module = "curse.maven:ae2-crystal-science-1435174", version.ref = "ae2cs" }
+ae2pw = { module = "curse.maven:ae2-pattern-workstation-1462173", version.ref = "ae2pw" }
 betterp2p = { module = "curse.maven:betterp2p-538092", version.ref = "betterp2p" }
 clothconfig = { module = "curse.maven:cloth-config-348521", version.ref = "clothconfig" }
 buildinggadgets = { module = "curse.maven:building-gadgets-298187", version.ref = "buildinggadgets" }
