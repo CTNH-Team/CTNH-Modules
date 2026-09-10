@@ -10,17 +10,17 @@ Module guides are **not** stored in this repository. They live in [CTNH-Docs](ht
 
 | Scope | Guide |
 |-------|-------|
-| Cross-module architecture contract | `docs/_architecture/AGENTS.md` |
-| Per module | `docs/<Module>/AGENTS.md` |
-| Per domain | `docs/<Module>/<domain>/AGENTS.md` |
+| Cross-module architecture contract | `ctnh-docs/references/_architecture/AGENTS.md` |
+| Per module | `ctnh-docs/references/<Module>/AGENTS.md` |
+| Per domain | `ctnh-docs/references/<Module>/<domain>/AGENTS.md` |
 
 Read the architecture contract before touching machine, trait, recipe capability, or Jade code: it defines state ownership boundaries, `@DescSynced`/`@Persisted` rules, Jade data minimization, and the module migration steps. Read the matching module guide before editing that module's source.
 
 Get the guides either from the skill release (`ctnh-docs-skill-<date>.zip` on the [CTNH-Docs releases page](https://github.com/CTNH-Team/CTNH-Docs/releases/latest)) or by fetching a raw file:
 
 ```text
-https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/docs/_architecture/AGENTS.md
-https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/docs/<Module>/AGENTS.md
+https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/ctnh-docs/references/_architecture/AGENTS.md
+https://raw.githubusercontent.com/CTNH-Team/CTNH-Docs/main/ctnh-docs/references/<Module>/AGENTS.md
 ```
 
 Guide edits belong in the CTNH-Docs repository, not here.
