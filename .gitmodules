@@ -33,3 +33,7 @@
 	path = modules/Create-Enough-Items
 	url = https://github.com/CTNH-Team/Create-Enough-Items.git
 	branch = dev
+[submodule "modules/Tea-Art-CTNH"]
+	path = modules/Tea-Art-CTNH
+	url = https://github.com/ZhuanTou33212/Botania-Tea-CTNH.git
+	branch = main
