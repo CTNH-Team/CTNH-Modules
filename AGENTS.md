@@ -154,6 +154,7 @@ CTPP registers 8 custom GT recipe types (kinetic/electric via `StressRecipeCapab
 - Root `ctnhSubprojects` excludes `:modules:GregTech-Modern`; shared CTNH scripts do not configure GTCEu.
 - `moddevgradle.gradle` passes existing mods `gtceu`, `ctpp`, `biomancy`, `expatternprovider`, `botania`, `bloodmagic`, `create_new_age`, `immersive_aircraft`, and `sophisticatedstorage` to datagen.
 - Several modules are dirty or untracked in the current worktree; preserve user/submodule changes.
+- CTNH-Mana magic integrations: `modules/CTNH-Mana/dependencies.gradle` depends on **Blood Magic** (`ctnh.bloodmagic`, `wayoftime.bloodmagic` rituals), **Apotheosis** (`ctnh.apotheosis`, bosses/affix gear), **Ars Nouveau** (`ctnh.arsnouveau`+`arscreo`), plus Botania/MythicBotany (`ctnh.botania`/`ctnh.mythicbotany`). Rituals, blood-network effects, and magic-integration surfaces in CTNH-Mana reference these mods directly; verify against their APIs before editing.
 - Module scale (Java files): CTNH-Core 394, CTNH-Mana 253, CTPP 219, CTNH-Bio 175, CTNH-Energy 171, CTNH-Astral 86, CTNH-Lib 57, Create-Enough-Items 31. Guides below use these counts as complexity hints.
 - Spelling quirks to preserve: Core mixin package is `mixin/dategen` (not `datagen`); CTPP fan-processing package is `data/recipe/fanprocessing` (no underscore); Mana multiblock dirs are correctly spelled `multiblock` (no legacy `Mutiblock`); Core `data/recipe/tconstruct/` is an empty leftover directory.
 - CEI namespace is `com.ctnh.cei`, not `com.moguang.cei`; it has no `*GTAddon` and no GT recipe registration.
