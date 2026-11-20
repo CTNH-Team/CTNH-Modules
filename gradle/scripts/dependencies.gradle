@@ -48,6 +48,7 @@ dependencies {
     modLocalRuntime(ctnh.architectury)
 
     // ModernFix
+    modCompileOnly(ctnh.modernfix)
     modLocalRuntime(ctnh.modernfix)
 
     // Just Enough Characters
